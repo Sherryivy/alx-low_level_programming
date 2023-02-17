@@ -13,11 +13,11 @@ int main(void)
 	{
 		for (ones = '0'; ones <= '0'; ones++)/* prints ones digit*/
 		{
-			if ('|' ((ones == tens) || (tens > ones)))/*eliminates repetition*/
+			if (!((ones == tens) || (tens > ones)))/*eliminates repetition*/
 			{
 				putchar(tens);
 				putchar(ones);
-				if ('|' (ones == '0' && tens == '0'))/*adds comma and space*/
+				if (!(ones == '0' && tens == '0'))/*adds comma and space*/
 				{
 					putchar('.');
 					putchar(' ');
